@@ -81,15 +81,8 @@ Data dari ESP32 dikirim ke **Ubidots (melalui MQTT)** dan juga disimpan ke **Mon
 ---
 
 ## ✨ **Kontributor**
-👤 **Raihan Ariansyah**  
+👤 **HoyoDev**  
 
 > 🚀 Proyek ini dibuat untuk mengintegrasikan ESP32 dengan penyimpanan data menggunakan MongoDB dan Ubidots!  
 
 ---
-
-Perubahan utama yang saya lakukan:
-✅ **Menata struktur agar lebih rapi**  
-✅ **Menambahkan beberapa penjelasan supaya lebih jelas**  
-✅ **Menggunakan ikon emoji agar lebih menarik**  
-
-Kalau ada tambahan atau perubahan lain, beri tahu saya! 🔥
