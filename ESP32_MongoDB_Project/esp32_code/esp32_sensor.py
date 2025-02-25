@@ -5,7 +5,7 @@ from umqtt.simple import MQTTClient
 from machine import Pin, I2C, ADC, PWM
 import dht
 import ssd1306
-import urequests  # Tambahan untuk HTTP request ke Flask
+import urequests
 
 # Konfigurasi
 UBIDOTS_TOKEN = "BBUS-5d877a76foJ5qKNRCoaLnXQEe5YRIi"
