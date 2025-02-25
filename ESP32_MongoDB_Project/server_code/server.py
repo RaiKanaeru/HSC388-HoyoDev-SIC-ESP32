@@ -21,16 +21,7 @@ except Exception as e:
 
 @app.route('/api/sensor/data', methods=['POST'])
 def receive_sensor_data():
-    """
-    Endpoint to receive sensor data from ESP32 and store it in MongoDB
-    Expected JSON format:
-    {
-        "temperature": 25.5,
-        "humidity": 60,
-        "gas_mq2": 1200.5,
-        "water_level": 35.2
-    }
-    """
+
     if not request.is_json:
         return jsonify({"error": "Request must be JSON"}), 400
     
@@ -64,13 +55,7 @@ def receive_sensor_data():
 
 @app.route('/api/sensor/data', methods=['GET'])
 def get_sensor_data():
-    """
-    Endpoint to get sensor data with optional filtering
-    Query parameters:
-    - sensor_type: temperature, humidity, gas_mq2, water_level
-    - sort_order: lowest, highest
-    - limit: number of records to return
-    """
+
     sensor_type = request.args.get('sensor_type', 'temperature')
     sort_order = request.args.get('sort_order', 'highest')
     limit = int(request.args.get('limit', 10))
@@ -94,13 +79,7 @@ def get_sensor_data():
 
 @app.route('/api/sensor/average', methods=['GET'])
 def get_average_data():
-    """
-    Endpoint to get average sensor data within a date range
-    Query parameters:
-    - sensor_type: temperature, humidity, gas_mq2, water_level
-    - start_date: DD-MM-YYYY
-    - end_date: DD-MM-YYYY
-    """
+
     sensor_type = request.args.get('sensor_type', 'temperature')
     start_date = request.args.get('start_date')
     end_date = request.args.get('end_date')
@@ -131,9 +110,7 @@ def get_average_data():
 
 @app.route('/api/sensor/latest', methods=['GET'])
 def get_latest_data():
-    """
-    Endpoint to get the latest sensor reading
-    """
+
     try:
         latest = collection.find_one(
             sort=[("timestamp", -1)]
