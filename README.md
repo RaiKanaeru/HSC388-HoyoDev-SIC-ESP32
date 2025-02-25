@@ -1,5 +1,3 @@
-README-mu sudah cukup jelas dan terstruktur. Berikut adalah perbaikannya agar lebih rapi dan mudah dipahami:  
-
 ---
 
 # **Proyek ESP32 dengan MongoDB**
